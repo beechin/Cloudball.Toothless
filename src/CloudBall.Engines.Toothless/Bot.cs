@@ -2,24 +2,23 @@
 using CloudBall.Engines.Toothless.Roles;
 using CloudBall.Engines.Toothless.Scenarios;
 using Common;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CloudBall.Engines.Toothless
 {
-	[BotName("Toothless 0.1")]
+	[BotName("Toothless 2.0")]
 	public class Bot : ITeam
 	{
 		protected static readonly IRole[] Roles = new IRole[]
 		{
 			Role.BallOwner,
 			Role.Pickup,
+			Role.BallOwnerTackler,
 			Role.CatchUp,
 			Role.Keeper,
 			Role.Sweeper,
+			Role.AttackDefender
 		};
 
 		public void Action(Team myTeam, Team enemyTeam, Ball ball, MatchInfo matchInfo)
